@@ -25,7 +25,7 @@ A simple web application built with Vue.js 3, TypeScript, and Pinia for state ma
 
 ## Live Demo
 
-[Link to Live Demo](https://zingy-treacle-5b7cb7.netlify.app/)
+[Link to Live Demo](https://shimmering-duckanoo-5779d6.netlify.app/)
 
 ## Screenshot
 

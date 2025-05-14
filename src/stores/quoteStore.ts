@@ -72,7 +72,7 @@ export const useQuoteStore = defineStore("quote", () => {
       const data = await response.json();
       console.log("API Data received:", data);
 
-      const quoteData = isDevelopment ? data[0] : data;
+      const quoteData = isDevelopment ? data[0] : (data as QuoteResponse);
 
       if (quoteData) {
         currentQuote.value = {
