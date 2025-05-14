@@ -1,6 +1,6 @@
-# Random Quote Generator (Vue 3 + Pinia)
+# Random Quote Generator (Vue 3 + Pinia + TypeScript)
 
-A simple web application built with Vue.js 3 and Pinia for state management that fetches and displays random quotes from the API-Ninjas Quotes API.
+A simple web application built with Vue.js 3, TypeScript, and Pinia for state management that fetches and displays random quotes from the API-Ninjas Quotes API.
 
 ## Features
 
@@ -10,10 +10,12 @@ A simple web application built with Vue.js 3 and Pinia for state management that
 - Shows loading indicator while fetching data.
 - Displays user-friendly error messages if the API request fails.
 - Responsive design (basic styling included).
+- Full TypeScript support with type checking.
 
 ## Technologies Used
 
 - **Frontend:** Vue.js 3 (Composition API)
+- **Language:** TypeScript
 - **State Management:** Pinia
 - **Build Tool:** Vite
 - **API:** [API-Ninjas Quotes API](https://api-ninjas.com/api/quotes)
@@ -39,6 +41,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 - Node.js (Version 16.x or higher recommended)
 - npm (usually comes with Node.js) or yarn
 - A Netlify account (for deployment)
+- TypeScript knowledge (for development)
 
 ### Installation
 
@@ -170,20 +173,23 @@ my-quote-app/
 ├── public/              # Static assets directly served
 ├── src/
 │   ├── assets/          # CSS, images, fonts processed by Vite
-│   ├── components/      # Reusable Vue components (QuoteDisplay, QuoteControls)
+│   ├── components/      # Reusable Vue components
 │   │   ├── QuoteDisplay.vue
 │   │   └── QuoteControls.vue
 │   ├── stores/          # Pinia state management stores
-│   │   └── quoteStore.js # Store for quote data, state, actions
+│   │   └── quoteStore.ts # Store for quote data, state, actions
 │   ├── App.vue          # Main application root component
-│   └── main.js          # Application entry point (initializes Vue, Pinia)
+│   ├── env.d.ts         # TypeScript declarations
+│   └── main.ts          # Application entry point
 ├── netlify/
 │   └── functions/       # Netlify serverless functions
 │       └── get-quote/   # Function for secure API calls
 ├── .env                 # Local environment variables (API Key - DO NOT COMMIT)
 ├── .gitignore           # Files/folders ignored by Git
 ├── index.html           # Main HTML template
-├── vite.config.js       # Vite build and server configuration (incl. proxy)
+├── tsconfig.json        # TypeScript configuration
+├── tsconfig.node.json   # TypeScript configuration for Node
+├── vite.config.ts       # Vite build and server configuration
 ├── package.json         # Project dependencies and scripts
 └── README.md            # This file
 ```
